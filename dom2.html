@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="dom2.css">
+</head>
+
+<body>
+    <div id="std">
+        <form id="stdform" onsubmit="getdata(event)">
+            <label for="fname">First Name </label>
+            <input type="text" id="fname" required><br>
+
+            <label for="sname">Second Name</label>
+            <input type="text" id="sname" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required><br>
+
+            <label for="pass">Password</label>
+            <input type="password" id="pass" required><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        let stddata = document.getElementById("stdform");
+        let fname = document.getElementById("fname");
+        let sname = document.getElementById("sname");
+        let email = document.getElementById("email");
+        let pass = document.getElementById("pass");
+
+        function getdata(event) {
+
+            console.log(fname.value);
+            console.log(sname.value);
+            console.log(email.value);
+            console.log(pass.value);
+
+
+        }
+    </script>
+</body>
+
+</html>

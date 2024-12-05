@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="stdform">
+        <label for="fname">First name</label>
+        <input type="text" name="" id="fname">
+        <label for="sname">Second name</label>
+        <input type="text" name="" id="sname">
+        <label for="email">Email</label>
+        <input type="email" name="" id="email">
+        <button id="btn">submit</button>
+        <div id="users"></div>
+    </form>
+
+    <script>
+        let btn = document.getElementById("btn");
+        let fname = document.getElementById("fname");
+        let user = document.getElementById("users")
+        let sname = document.getElementById("sname");
+        let email = document.getElementById("email");
+        btn.addEventListener('click',(event)=>{
+            event.preventDefault();//it is use to stop the page from refreshing
+            let firtname = document.createElement('div');//it is use to create a div tag in html 
+            let secondname = document.createElement('div');//it is use to create a p tag in html
+            let email1Data = document.createElement('div');
+
+            firtname.textContent=fname.value;//it is use to add text in div tag
+            secondname.textContent=sname.value;//it is use to add text in div tag
+            email1Data.textContent=email.value;//it is use to add text in div tag
+            user.appendChild(firtname);//it is use to add div tag in html
+            user.appendChild(secondname);//it is use to add div tag in html
+            user.appendChild(email1Data);//it is use to add div tag in html
+            console.log(fname.value);//it is use to print the value in console
+            
+          
+        })
+    </script>
+</body>
+</html>
